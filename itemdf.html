@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+  <title>Item Drop Finder</title>
+	<link rel="stylesheet" href="Itemdf_stylesheet.css">
+</head>
+
+<body>
+
+	<select name="armorTypeSelect" id="armorTypeSelect">
+		<option value="plate" onclick="armorTypeSelect('plate')" selected>Plate</option>
+		<option value="mail" onclick="armorTypeSelect('mail')">Mail</option>
+		<option value="leather" onclick="armorTypeSelect('leather')">Leather</option>
+		<option value="cloth" onclick="armorTypeSelect('cloth')">Cloth</option>
+	</select>
+	
+	<div id="slots">
+		<div id="leftrow">
+			<p id="slotcaption">Head</p>
+			<input type="checkbox" id="headCheckbox" onclick="slotCheck('head')">
+			<label for="headCheckbox"><img src="img/ui-paperdoll-slot-head.png" alt="Head Slot"></label><br>
+			
+			<p id="slotcaption">Neck</p>
+			<input type="checkbox" id="neckCheckbox" onclick="slotCheck('neck')">
+			<label for="neckCheckbox"><img src="img/ui-paperdoll-slot-neck.png" alt="Neck Slot"></label><br>
+			
+			<p id="slotcaption">Shoulder</p>
+			<input type="checkbox" id="shoulderCheckbox" onclick="slotCheck('shoulder')">
+			<label for="shoulderCheckbox"><img src="img/ui-paperdoll-slot-shoulder.png" alt="Shoulder Slot"></label><br>
+			
+			<p id="slotcaption">Back</p>
+			<input type="checkbox" id="backCheckbox" onclick="slotCheck('back')">
+			<label for="backCheckbox"><img src="img/ui-paperdoll-slot-chest.png" alt="Back Slot"></label><br>
+			
+			<p id="slotcaption">Chest</p>
+			<input type="checkbox" id="chestCheckbox" onclick="slotCheck('chest')">
+			<label for="chestCheckbox"><img src="img/ui-paperdoll-slot-chest.png" alt="Chest Slot"></label><br>
+			
+			<p id="slotcaption">Wrist</p>
+			<input type="checkbox" id="wristCheckbox" onclick="slotCheck('wrist')">
+			<label for="wristCheckbox"><img src="img/ui-paperdoll-slot-wrist.png" alt="Wrist Slot"></label><br>
+		</div>
+		
+		<div id="rightrow">
+			<p id="slotcaption">Hands</p>
+			<input type="checkbox" id="handsCheckbox" onclick="slotCheck('hands')">
+			<label for="handsCheckbox"><img src="img/ui-paperdoll-slot-hands.png" alt="Hands Slot"></label><br>
+			
+			<p id="slotcaption">Waist</p>
+			<input type="checkbox" id="waistCheckbox" onclick="slotCheck('waist')">
+			<label for="waistCheckbox"><img src="img/ui-paperdoll-slot-waist.png" alt="Waist Slot"></label><br>
+			
+			<p id="slotcaption">Legs</p>
+			<input type="checkbox" id="legsCheckbox" onclick="slotCheck('legs')">
+			<label for="legsCheckbox"><img src="img/ui-paperdoll-slot-legs.png" alt="Legs Slot"></label><br>
+			
+			<p id="slotcaption">Feet</p>
+			<input type="checkbox" id="feetCheckbox" onclick="slotCheck('feet')">
+			<label for="feetCheckbox"><img src="img/ui-paperdoll-slot-feet.png" alt="Feet Slot"></label><br>
+			
+			<p id="slotcaption">Finger</p>
+			<input type="checkbox" id="fingerCheckbox" onclick="slotCheck('finger')">
+			<label for="fingerCheckbox"><img src="img/ui-paperdoll-slot-finger.png" alt="Finger Slot"></label><br>
+			
+			<div class="dropdown">
+				<p id="slotcaption">Weapon</p>
+				<button class="dropbtn">
+					<label for="dropbtn"><img src="img/ui-paperdoll-slot-mainhand.png" alt="Wrist Slot"></label><br>
+				</button>
+				<div class="dropdown-content">
+					<input type="checkbox" id="strOnehandCheckbox" onclick="slotCheck('str_onehand')">
+					<label for="strOnehandCheckbox">Strength&nbsp;One&#8209;Hand</label><br>
+					
+					<input type="checkbox" id="strTwohandCheckbox" onclick="slotCheck('str_twohand')">
+					<label for="strTwohandCheckbox">Strength&nbsp;Two&#8209;Hand</label><br>
+					
+					<input type="checkbox" id="agiOnehandCheckbox" onclick="slotCheck('agi_onehand')">
+					<label for="agiOnehandCheckbox">Agility&nbsp;One&#8209;Hand</label><br>
+					
+					<input type="checkbox" id="agiTwohandCheckbox" onclick="slotCheck('agi_twohand')">
+					<label for="agiTwohandCheckbox">Agility&nbsp;Two&#8209;Hand</label><br>
+					
+					<input type="checkbox" id="intOnehandCheckbox" onclick="slotCheck('int_onehand')">
+					<label for="intOnehandCheckbox">Intellect&nbsp;One&#8209;Hand</label><br>
+					
+					<input type="checkbox" id="intTwohandCheckbox" onclick="slotCheck('int_twohand')">
+					<label for="intTwohandCheckbox">Intellect&nbsp;Two&#8209;Hand</label><br>
+					
+					<input type="checkbox" id="rangedCheckbox" onclick="slotCheck('ranged')">
+					<label for="rangedCheckbox">Ranged</label><br>
+					
+					<input type="checkbox" id="offhandCheckbox" onclick="slotCheck('offhand')">
+					<label for="offhandCheckbox">Off&#8209;Hand</label><br>
+					
+					<input type="checkbox" id="shieldCheckbox" onclick="slotCheck('shield')">
+					<label for="shieldCheckbox">Shield</label><br>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="dungeons">
+		<p id="othersideImage">De Other Side has these items</p>
+		<p id="hallsImage">Halls of Atonement has these items</p>
+		<p id="mistsImage">Mists of Tirna Schythe has these items</p>
+		<p id="plagueImage">Plaguefall has these items</p>
+		<p id="sanguineImage">Sanguine Depths has these items</p>
+		<p id="spiresImage">Spires of Ascension has these items</p>
+		<p id="necroticImage">Necrotic Wake has these items</p>
+		<p id="theaterImage">Theater of Pain has these items</p>
+	</div>
+	
+	<script src="itemdf_script.js"></script>
+</body>
+</html>
